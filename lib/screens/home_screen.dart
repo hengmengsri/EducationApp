@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_eduction_app/screens/course_screen.dart';
+import 'course_screen.dart';
 
 class HomePage extends StatelessWidget {
   List catName = [
@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
     Icon(Icons.leaderboard, size: 30, color: Colors.white),
   ];
 
-  List<String> imgList = ['Flutter', 'React Native', 'Python', 'C#'];
+  List imgList = ['Flutter', 'React Native', 'Python', 'C#'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -169,7 +169,7 @@ class HomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => CourseScreen(),
+                            builder: (context) => CourseScreen(imgList[index]),
                           ),
                         );
                       },
